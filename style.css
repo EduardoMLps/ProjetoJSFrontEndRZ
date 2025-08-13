@@ -20,13 +20,16 @@ a:hover {
 }
 
 header {
-    display: block;
-    background-color: #526DCF;
-    border-bottom: 10px solid #4242CF;
+    display: flex;
+    flex-direction: row;
+    background-color: #5AB5BF;
     color: white;
     padding: 20px;
     font-size: 2em;
     align-items: center;
+}
+header * {
+    margin: 10px;
 }
 
 #mainArea {
@@ -55,10 +58,22 @@ header {
     flex: 1;
     box-shadow: 0px 0px 10px 5px #bbb;
 }
+.DirDiv {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
 
 footer {
-    background-color: #262833;
-    border-top: 10px solid #414150;
+    background-color: #011126;
     color: white;
     padding: 50px;
+}
+.Indication {
+    font-size: 30px;
+    background-color: aliceblue;
+    border-radius: 15px;
+    padding: 10px;
+    margin-right: 10px;
+    box-shadow: 0 0 5px 2px #bbb;
 }

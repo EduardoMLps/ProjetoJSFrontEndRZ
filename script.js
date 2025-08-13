@@ -4,8 +4,8 @@ const ctx = canvas.getContext("2d");
 
 const gridSize = 30;
 const FPS = 32;
-const boardHeight = 13;
-const boardWidth = 20;
+const boardHeight = 26;
+const boardWidth = 16;
 var gameRunning = false;
 var tempoDeQueda = 28;
 
@@ -73,17 +73,17 @@ class tetromino {
     }
 }
 
-const Opiece = [[[0, 0, '#ff0'], [1, 0, '#ff0'], [0, 1, '#ff0'], [1, 1, '#ff0']], [[0, 0, '#ff0'], [1, 0, '#ff0'], [0, 1, '#ff0'], [1, 1, '#ff0']], [[0, 0, '#ff0'], [1, 0, '#ff0'], [0, 1, '#ff0'], [1, 1, '#ff0']], [[0, 0, '#ff0'], [1, 0, '#ff0'], [0, 1, '#ff0'], [1, 1, '#ff0']]];
-const Ipiece = [[[0, 0, '#0ff'], [1, 0, '#0ff'], [2, 0, '#0ff'], [3, 0, '#0ff']], [[0, 0, '#0ff'], [0, 1, '#0ff'], [0, 2, '#0ff'], [0, 3, '#0ff']], [[0, 0, '#0ff'], [1, 0, '#0ff'], [2, 0, '#0ff'], [3, 0, '#0ff']], [[0, 0, '#0ff'], [0, 1, '#0ff'], [0, 2, '#0ff'], [0, 3, '#0ff']]];
-const Tpiece = [[[0, 0, '#f0f'], [1, 0, '#f0f'], [2, 0, '#f0f'], [1, 1, '#f0f']], [[1, 0, '#f0f'], [0, 1, '#f0f'], [1, 1, '#f0f'], [1, 2, '#f0f']], [[1, 0, '#f0f'], [0, 1, '#f0f'], [1, 1, '#f0f'], [2, 1, '#f0f']], [[0, 0, '#f0f'], [0, 1, '#f0f'], [1, 1, '#f0f'], [0, 2, '#f0f']]];
-const Jpiece = [[[0, 0, '#00f'], [1, 0, '#00f'], [2, 0, '#00f'], [2, 1, '#00f']], [[1, 0, '#00f'], [1, 1, '#00f'], [0, 2, '#00f'], [1, 2, '#00f']], [[0, 0, '#00f'], [0, 1, '#00f'], [1, 1, '#00f'], [2, 1, '#00f']], [[0, 0, '#00f'], [1, 0, '#00f'], [0, 1, '#00f'], [0, 2, '#00f']]];
-const Lpiece = [[[0, 0, '#f90'], [1, 0, '#f90'], [2, 0, '#f90'], [0, 1, '#f90']], [[0, 0, '#f90'], [1, 0, '#f90'], [1, 1, '#f90'], [1, 2, '#f90']], [[2, 0, '#f90'], [0, 1, '#f90'], [1, 1, '#f90'], [2, 1, '#f90']], [[0, 0, '#f90'], [0, 1, '#f90'], [0, 2, '#f90'], [1, 2, '#f90']]];
-const Spiece = [[[1, 0, '#0f0'], [2, 0, '#0f0'], [0, 1, '#0f0'], [1, 1, '#0f0']], [[0, 0, '#0f0'], [0, 1, '#0f0'], [1, 1, '#0f0'], [1, 2, '#0f0']], [[1, 0, '#0f0'], [2, 0, '#0f0'], [0, 1, '#0f0'], [1, 1, '#0f0']], [[0, 0, '#0f0'], [0, 1, '#0f0'], [1, 1, '#0f0'], [1, 2, '#0f0']]];
-const Zpiece = [[[0, 0, '#f00'], [1, 0, '#f00'], [1, 1, '#f00'], [2, 1, '#f00']], [[1, 0, '#f00'], [0, 1, '#f00'], [1, 1, '#f00'], [0, 2, '#f00']], [[0, 0, '#f00'], [1, 0, '#f00'], [1, 1, '#f00'], [2, 1, '#f00']], [[1, 0, '#f00'], [0, 1, '#f00'], [1, 1, '#f00'], [0, 2, '#f00']]];
+const Opiece = [[[0, 0, '#F20707'], [1, 0, '#F20707'], [0, 1, '#F20707'], [1, 1, '#F20707']], [[0, 0, '#F20707'], [1, 0, '#F20707'], [0, 1, '#F20707'], [1, 1, '#F20707']], [[0, 0, '#F20707'], [1, 0, '#F20707'], [0, 1, '#F20707'], [1, 1, '#F20707']], [[0, 0, '#F20707'], [1, 0, '#F20707'], [0, 1, '#F20707'], [1, 1, '#F20707']]];
+const Ipiece = [[[0, 0, '#E67A3E'], [1, 0, '#E67A3E'], [2, 0, '#E67A3E'], [3, 0, '#E67A3E']], [[0, 0, '#E67A3E'], [0, 1, '#E67A3E'], [0, 2, '#E67A3E'], [0, 3, '#E67A3E']], [[0, 0, '#E67A3E'], [1, 0, '#E67A3E'], [2, 0, '#E67A3E'], [3, 0, '#E67A3E']], [[0, 0, '#E67A3E'], [0, 1, '#E67A3E'], [0, 2, '#E67A3E'], [0, 3, '#E67A3E']]];
+const Tpiece = [[[0, 0, '#5551E6'], [1, 0, '#5551E6'], [2, 0, '#5551E6'], [1, 1, '#5551E6']], [[1, 0, '#5551E6'], [0, 1, '#5551E6'], [1, 1, '#5551E6'], [1, 2, '#5551E6']], [[1, 0, '#5551E6'], [0, 1, '#5551E6'], [1, 1, '#5551E6'], [2, 1, '#5551E6']], [[0, 0, '#5551E6'], [0, 1, '#5551E6'], [1, 1, '#5551E6'], [0, 2, '#5551E6']]];
+const Jpiece = [[[0, 0, '#39E610'], [1, 0, '#39E610'], [2, 0, '#39E610'], [2, 1, '#39E610']], [[1, 0, '#39E610'], [1, 1, '#39E610'], [0, 2, '#39E610'], [1, 2, '#39E610']], [[0, 0, '#39E610'], [0, 1, '#39E610'], [1, 1, '#39E610'], [2, 1, '#39E610']], [[0, 0, '#39E610'], [1, 0, '#39E610'], [0, 1, '#39E610'], [0, 2, '#39E610']]];
+const Lpiece = [[[0, 0, '#2C9912'], [1, 0, '#2C9912'], [2, 0, '#2C9912'], [0, 1, '#2C9912']], [[0, 0, '#2C9912'], [1, 0, '#2C9912'], [1, 1, '#2C9912'], [1, 2, '#2C9912']], [[2, 0, '#2C9912'], [0, 1, '#2C9912'], [1, 1, '#2C9912'], [2, 1, '#2C9912']], [[0, 0, '#2C9912'], [0, 1, '#2C9912'], [0, 2, '#2C9912'], [1, 2, '#2C9912']]];
+const Spiece = [[[1, 0, '#4D3FA6'], [2, 0, '#4D3FA6'], [0, 1, '#4D3FA6'], [1, 1, '#4D3FA6']], [[0, 0, '#4D3FA6'], [0, 1, '#4D3FA6'], [1, 1, '#4D3FA6'], [1, 2, '#4D3FA6']], [[1, 0, '#4D3FA6'], [2, 0, '#4D3FA6'], [0, 1, '#4D3FA6'], [1, 1, '#4D3FA6']], [[0, 0, '#4D3FA6'], [0, 1, '#4D3FA6'], [1, 1, '#4D3FA6'], [1, 2, '#4D3FA6']]];
+const Zpiece = [[[0, 0, '#D91136'], [1, 0, '#D91136'], [1, 1, '#D91136'], [2, 1, '#D91136']], [[1, 0, '#D91136'], [0, 1, '#D91136'], [1, 1, '#D91136'], [0, 2, '#D91136']], [[0, 0, '#D91136'], [1, 0, '#D91136'], [1, 1, '#D91136'], [2, 1, '#D91136']], [[1, 0, '#D91136'], [0, 1, '#D91136'], [1, 1, '#D91136'], [0, 2, '#D91136']]];
 
 const allPieces = [Opiece, Ipiece, Tpiece, Jpiece, Lpiece, Spiece, Zpiece];
 //eu sei que essa váriavel parece idiota, e é mesmo. Porém tem que ser dessa maneira porque isso não funcionaria da maneira que precisase funcionar
-var rows = [Array(boardWidth),Array(boardWidth),Array(boardWidth),Array(boardWidth),Array(boardWidth),Array(boardWidth),Array(boardWidth),Array(boardWidth),Array(boardWidth),Array(boardWidth),Array(boardWidth),Array(boardWidth),Array(boardWidth)];
+var rows = [Array(boardWidth),Array(boardWidth),Array(boardWidth),Array(boardWidth),Array(boardWidth),Array(boardWidth),Array(boardWidth),Array(boardWidth),Array(boardWidth),Array(boardWidth),Array(boardWidth),Array(boardWidth),Array(boardWidth),Array(boardWidth),Array(boardWidth),Array(boardWidth),Array(boardWidth),Array(boardWidth),Array(boardWidth),Array(boardWidth),Array(boardWidth),Array(boardWidth),Array(boardWidth),Array(boardWidth),Array(boardWidth),Array(boardWidth)];
 var fall = 0;
 
 var canMoveLeft = true;

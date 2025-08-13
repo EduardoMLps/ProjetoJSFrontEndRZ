@@ -1,37 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tetris - EduardoMLps</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="style.css">
+    <link>
 </head>
 <body>
     <header>
-        <h1>Tetris - EduardoMLps</h1>
+        <i class='bx bx-cube' style="font-size: 80px;"></i>
+        <h1>Tetris por Eduardo Mello Lopes</h1>
     </header>
     <div id="mainArea">
-        <canvas id="gameCanvas" width="600px" height="400px">
+        <div class="Section">
+            <h2 id="visor">Pontos do jogo: 0</h2>
+        </div>
+        <canvas id="gameCanvas" width="480px" height="780px">
             Seu navegador não suporta HTML5, mude para um mais novo!
         </canvas>
         <div class="Section">
-            <h1 id="visor">Pontos: 0</h1>
+            <div class="DirDiv">
+                <i class='bx bx-question-mark Indication'></i>
+                <h2>O que é Tetris:</h2>
+            </div>
+            <p>Tetris é um jogo eletrônico criado em 1985. O objetivo dele é empilhar blocos chamados tetrominós que descem no visor, em que você, o jogador, deve completar linhas horizontais com eles. Quando uma linha horizontal é completa ela é apagada e pontos serão acrescentados.</p>
         </div>
         <div class="Section">
-            <h1>Como jogar:</h1>
-            <p>1. Clique na tela para começar o jogo</p>
+            <div class="DirDiv">
+                <i class='bx bx-joystick Indication'></i>
+                <h2>Como jogar o jogo:</h2>
+            </div>
+            <p>1. Clique com botão esquerdo do mouse no visor acima para começar o jogo Tetris</p>
             <p>2. Use "W","A","S" e "D" para girar e mover as peças que cairem</p>
-            <p>3. Use "↑" ou "↓" para controlar a velocidade em que as peças caem</p>
-        </div>
-        <div class="Section">
-            <h1>O que é Tetris:</h1>
-            <p>Tetris é um jogo eletrônico criado em 1985. O objetivo dele é empilhar blocos chamados tetrominós que descem a tela, em que você, o jogador, deve completar linhas horizontais com eles. Quando uma linha horizontal é completa ela é apagada e você recebe pontos por isso.</p>
+            <p>3. Use "↑" e "↓" para controlar a velocidade em que as peças caem</p>
+            <p>4. Pressione "Esq" para sair do jogo</p>
         </div>
     </div>
     <footer>
         <div>
-            <h1>Minhas contas:</h1>
-            <a href="https://github.com/EduardoMLps">GitHub</a>
+            <h3>Minhas redes sociais:</h3>
+            <a href="https://github.com/EduardoMLps" class="DirDiv"><i class='bx bxl-github' style="font-size: 40px;"></i>GitHub</a>
         </div>
     </footer>
 </body>
